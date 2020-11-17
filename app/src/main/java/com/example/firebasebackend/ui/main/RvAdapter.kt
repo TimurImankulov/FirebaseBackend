@@ -41,7 +41,6 @@ class RvHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         val image = newsItem.image
         Picasso.get().load(image).into(itemView.image)
-
     }
 }
 

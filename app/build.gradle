@@ -13,6 +13,8 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        buildConfigField "String", "FIREBASE_URL", "\"${firebase_url}\""
+
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

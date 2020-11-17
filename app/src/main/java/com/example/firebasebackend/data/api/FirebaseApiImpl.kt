@@ -1,6 +1,7 @@
 package com.example.firebasebackend.data.api
 
 import androidx.lifecycle.MutableLiveData
+import com.example.firebasebackend.BuildConfig.FIREBASE_URL
 import com.example.firebasebackend.data.model.NewsItem
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -18,7 +19,7 @@ class FirebaseApiImpl : FirebaseApi {
         val data = MutableLiveData<ArrayList<NewsItem>>()
 
         val database = Firebase.database
-        val ref = database.getReferenceFromUrl("https://first-backend-firebase-8b645.firebaseio.com/")
+        val ref = database.getReferenceFromUrl(FIREBASE_URL)
 
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

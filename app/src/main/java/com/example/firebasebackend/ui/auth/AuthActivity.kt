@@ -18,6 +18,7 @@ class AuthActivity : BaseAuthActivity() {
     private fun setupListeners() {
         btnSentPhone.setOnClickListener {
             verifyPhone(etInputNumber.text.toString())
+            startTimer()
         }
 
         btnSentCode.setOnClickListener {
